@@ -1,0 +1,214 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  background: black;
+  position:relative;
+  overflow: hidden;
+}
+
+.parallax {
+ perspective: 1px; 
+ height: 100vh; 
+ overflow-x: hidden; 
+ overflow-y: auto; 
+}
+
+.parallax__layer {
+ position: absolute;
+ top: 0;
+ right: 0;
+ bottom: 0;
+ left: 0;
+}
+
+.parallax__layer--base {
+ transform: translateZ(0); /* niveau plancher */
+}
+.parallax__layer--back {
+ transform: translateZ(-1px); /* niveau arrière plan */
+}
+
+.soleil
+{
+  position: absolute;
+  width:2000px;
+  left:40%;
+}
+
+#content
+{
+  position: relative;
+  background-color: #333333;
+  width: 100%;
+  height: 500px;
+  bottom: 0;
+}
+
+.feuillesTombantes
+{
+  position: absolute;
+  top:0;
+  left:70%; 
+} 
+
+.feuillesMontantes
+{
+  position: absolute;
+  top:0;
+  width: 50px;
+  left:70%;
+  animation: feuilleMontantes 8s 0s infinite ease-in-out;
+}
+
+.feuillesRapide1
+{
+  animation: feuilleTombantes 4s 0s infinite ease-in-out;
+  width: 30px;
+}
+
+.feuillesRapide2
+{
+  animation: feuilleTombantes 5s 0s infinite ease-in-out;
+  width: 37px;
+}
+
+.feuillesNeutre1
+{
+  animation: feuilleTombantes 9s 0s infinite ease-in-out;
+  width: 55px;
+}
+
+.feuillesNeutre2
+{
+  animation: feuilleTombantes 7s 0s infinite ease-in-out;
+  width: 78px;
+
+}
+
+.feuillesLente1
+{
+  animation: feuilleTombantes 15s 0s infinite ease-in-out;
+  width: 100px;
+}
+
+.feuillesLente2
+{
+  animation: feuilleTombantes 17s 0s infinite ease-in-out;
+  width: 130px;
+}
+
+/*Les feuilles ciblée par leur ID*/
+#feuille1
+{
+  left:55%;
+}
+
+
+#feuille2
+{
+  left: 40%;
+}
+
+
+#feuille3
+{ 
+  left: 47%;
+}
+
+
+#feuille4
+{
+  left:35%;
+}
+
+#feuille5
+{
+  left:60%;
+}
+
+
+#feuille6
+{
+  left:50%;
+}
+
+/*ANIMATION 1: LES FEUILLES QUI TOMBENT*/
+@keyframes feuilleTombantes
+{
+  0%{transform:translate(0%,-250px);}
+  20%{transform:translate(-3%,100px) rotate(60deg);}
+  40%{transform:translate(3.5%,300px) rotate(0deg);}
+  60%{transform:translate(-4%,550px) rotate(60deg);}
+  80%{transform:translate(4.5%,700px) rotate(0deg);}
+  100%{transform:translate(-5.0%,1000px) rotate(60deg);}  
+}
+
+@keyframes feuilleMontantes
+{
+  0%{transform:translate(0px,1000px);}
+  20%{transform:translate(-30px,800px) rotate(0deg);}
+  40%{transform:translate(35px,600px) rotate(60deg);}
+  60%{transform:translate(-40px,350px) rotate(150deg);}
+  80%{transform:translate(45px,100px) rotate(280deg);}
+  100%{transform:translate(-50px,-100px) rotate(360deg);}  
+}
+/*L'arbre au fond*/
+.arbre
+{
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+
+/*Le personnage qui fume une clope*/
+.persoFume
+{
+  width:20%;
+  position:absolute;
+  top: 90%;
+  left: 30%;
+}
+
+/*La fumée émanant de la clope*/
+.fumee
+{
+  position: absolute;
+  top: 38%;
+  left: 32%;
+  animation: nuageFumee 5s 1s infinite ease-in-out;
+}
+
+/*ANIMATION 2: LES BOUFFÉE DE FUMÉE ÉMANANT DE LA CLOPE*/
+@keyframes nuageFumee{
+  from{opacity: 1; transform:scale(0.1);}
+  50%{opacity: 0.9;}
+  to{opacity: 0; transform:scale(1);} 
+}
+
+
+.plaineAvP
+{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+.plaineArrP
+{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left:0;
+}
+
+
+
+
+
+
